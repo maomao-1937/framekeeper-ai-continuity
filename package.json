@@ -1,0 +1,16 @@
+{
+  "name": "framekeeper-ai-continuity",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A local-first continuity checker and prompt locker for multi-shot AI video scenes",
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test",
+    "check": "node --check app.js && node --check core.js && node --check sample.js && node --check server.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

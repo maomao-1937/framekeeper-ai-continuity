@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-07T08:57:00Z",
+  "title": "Design System: FrameKeeper",
+  "extensions": {
+    "colorMeta": {
+      "teal": { "role": "primary", "displayName": "Approved sea-glass teal" },
+      "coral": { "role": "status", "displayName": "Continuity drift coral" },
+      "amber": { "role": "status", "displayName": "Missing anchor amber" },
+      "paper": { "role": "neutral", "displayName": "Cool paper" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Scene title", "purpose": "Editable scene identity." },
+      "label": { "displayName": "Sheet label", "purpose": "Compact field and status labels." }
+    },
+    "shadows": [
+      { "name": "toast", "value": "0 10px 28px rgba(18, 46, 49, .18)", "purpose": "Transient feedback only." }
+    ],
+    "motion": [
+      { "name": "state", "value": "140–180ms ease", "purpose": "Hover and status transitions; removed for reduced-motion users." }
+    ],
+    "breakpoints": [
+      { "name": "workspace-two-column", "value": "1150px" },
+      { "name": "workspace-mobile", "value": "760px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Emphasized scene action.",
+      "html": "<button class=\"ds-btn-primary\">Export pack</button>",
+      "css": ".ds-btn-primary{min-height:38px;border:1px solid #193238;background:#193238;color:#fff;padding:9px 13px;font:750 12px Avenir Next,Arial,sans-serif;cursor:pointer}.ds-btn-primary:hover{background:#176d65;border-color:#176d65}.ds-btn-primary:focus-visible{outline:3px solid #0a625d;outline-offset:3px}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Quiet editing action.",
+      "html": "<button class=\"ds-btn-secondary\">Import JSON</button>",
+      "css": ".ds-btn-secondary{min-height:38px;border:1px solid #9cb5b1;background:#fcfefd;color:#193238;padding:9px 13px;font:750 12px Avenir Next,Arial,sans-serif;cursor:pointer}.ds-btn-secondary:hover{background:#e0efeb;border-color:#176d65}.ds-btn-secondary:focus-visible{outline:3px solid #0a625d;outline-offset:3px}"
+    },
+    {
+      "name": "Field control",
+      "kind": "input",
+      "refersTo": "field-control",
+      "description": "Labeled editable scene anchor.",
+      "html": "<label class=\"ds-label\">Wardrobe<input class=\"ds-field\" value=\"Yellow raincoat\"></label>",
+      "css": ".ds-label{display:grid;gap:7px;color:#52686c;font:800 11px Avenir Next,Arial,sans-serif;letter-spacing:.09em;text-transform:uppercase}.ds-field{display:block;width:100%;min-height:38px;padding:10px 11px;border:1px solid #c7d6d4;border-radius:2px;background:#fff;color:#193238;font:13px Avenir Next,Arial,sans-serif}.ds-field:focus-visible{outline:2px solid #a1d4ca;border-color:#176d65}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The continuity supervisor's script breakdown sheet",
+    "overview": "A quiet editing instrument that connects the shot strip, scene bible, issue list, and locked prompt.",
+    "keyCharacteristics": ["Precise", "Quiet", "Editable", "Traceable"],
+    "rules": [
+      { "name": "Status has words", "body": "Pair status colors with clear text for drift, missing, and clear.", "section": "colors" },
+      { "name": "Flat sheet", "body": "Use borders and tonal paper, not raised card stacks.", "section": "elevation" }
+    ],
+    "dos": ["Preserve the field-to-issue-to-prompt feedback loop.", "Keep visible keyboard focus and responsive issue access."],
+    "donts": ["Do not add fake metrics or dashboard cards.", "Do not use decorative gradients or unexplained icon glyphs."]
+  }
+}
